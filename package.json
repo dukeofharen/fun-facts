@@ -1,0 +1,14 @@
+{
+  "name": "funfacts",
+  "version": "1.0.0",
+  "description": "Fun facts app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Duco Winterwerp",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
