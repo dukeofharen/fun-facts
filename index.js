@@ -4,6 +4,11 @@ const port = 5000
 var facts = require('./facts')
 var favourites = []
 
+app.use(function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', '*')
+    next()
+})
+
 app.get('/facts/random', function (req, res) {
     const index = Math.floor(Math.random()*facts.length);
     const fact = facts[index];
@@ -28,3 +33,5 @@ app.get('/facts/favourites', function(req, res){
 
 app.listen(port)
 console.log(`Listening on port ${port}`)
+
+//
